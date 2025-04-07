@@ -11,5 +11,6 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
-    3/0 # 강제로 오류발생
+    # 3/0 # 강제로 오류발생
+    current_app.logger.info('INFO 레벨로 출력')
     return redirect(url_for('question._list'))
